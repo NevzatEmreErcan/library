@@ -1,0 +1,242 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #454545;
+    padding-top: 4em;
+}
+
+header{
+    width: 100%;
+    height: 4em;
+    background: #FF6000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header> h1{
+    font-size: 2.2em;
+    text-align: center;
+}
+
+main{
+    width: 100%;
+    height: calc(100vh - 4em);
+    position: relative;
+}
+
+.add-btn{
+    padding: .4em;
+    background: #FF6000;
+    font-weight: 600;
+    border: 2px solid #000;
+    border-radius: 1em;
+
+    position: absolute;
+    right: 20%;
+    top: calc(8vh - 38px);
+}
+
+.add-btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.library{
+    width: 60%;
+    min-width: 780px;
+    overflow: hidden;
+    background-color: #FF6000;
+    padding: .4em;
+    border: 3px solid #000;
+    border-radius: 1em 1em .4em .4em;
+
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table th,
+table td{
+    border: 1px solid #FFE6C7;
+    padding: .2em;
+}
+
+table th:first-child,
+table td:first-child{
+    border-left: none;
+}
+
+table th:last-child,
+table td:last-child{
+    border-right: none;
+}
+
+table tr:first-child th{
+    border-top: none;
+}
+
+table tr:last-child td{
+    border-bottom: none;
+}
+
+table>thead>tr{
+    background-color: #FF6000;
+
+    >.title{
+        width: 35%;
+    }
+    >.author{
+        width: 30%;
+    }
+    >.pages{
+        width: 10%;
+    }
+    >.status{
+        width: 10%;
+    }
+    >.delete{
+        width: 15%;
+    }
+}
+
+table>thead>tr>.delete>button{
+    background: #FFE6C7;
+    width: 90%;
+    padding: .2em;
+    font-size: .9em;
+    border: 2px solid #000;
+    border-radius: 15px;
+}
+
+table>thead>tr>.delete>button:hover{
+    cursor: pointer;
+}
+
+table>tbody>tr{
+    text-align: center;
+    background: #FFA559 ;
+}
+
+.hidden{display: none;}
+
+.dialog{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000cc;
+    overflow: hidden;
+}
+
+.dialog-content{
+    width: 450px;
+    height: 600px;
+    background: #FFA559;
+    border: 10px solid #FF6000;
+    border-radius: 20px;
+    position: absolute;
+    top: calc(8vh + 4em);
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.close-btn{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.dialog-content>.close-btn{
+    position: absolute;
+    top: 0;
+    right: 4px;
+}
+
+.dialog-content>form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.dialog-content>form>h2{
+    font-size: 1.6em;
+}
+
+.dialog-content>form>input{
+    width: 250px;
+    font-size: 1.1em;
+    padding: .2rem;
+    border: 4px solid #FFE6C7;
+    border-radius: 4px;
+    outline: none;
+    background: #FFE6C7;
+}
+
+.dialog-content>form>label{
+    user-select: none;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.dialog-content>form>label>p{
+    font-size: 1.1em;
+}
+
+.dialog-content>form>label>input{
+    width: 1.1em;
+    height: 1.1em;
+    border: 2px solid #FFE6C7;
+    cursor: pointer;
+}
+
+.dialog-content>form>label>input:checked{
+    accent-color: #FF6000;
+}
+
+.dialog-content>form>button[type="submit"]{
+    width: 125px;
+    height: 40px;
+    background: #FFE6C7;
+    border: 3px solid #FF6000;
+    border-radius: 10px;
+}
+
+.dialog-content>form>button[type="submit"]:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+/*  JavaScirpt  */
+
+.status-checkbox{
+    user-select: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+    .add-btn{
+        right: calc((100% - 780px) / 2);
+    }
+}

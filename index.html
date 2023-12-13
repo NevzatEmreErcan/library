@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Library</h1>
+    </header>
+    <main>
+        <button class="add-btn">Add a New Book</button>
+        
+        <div class="library">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="title">Title</th>
+                        <th class="author">Author</th>
+                        <th class="pages">Pages</th>
+                        <th class="status">Status</th>
+                        <th class="delete"><button>Delete All</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div class="dialog hidden">
+        <div class="dialog-content">
+            <button class="close-btn">&#10005</button>
+
+            <form action="">
+                <h2>Add a New Book</h2>
+
+                <input type="text" name="title" id="title" placeholder="Title" required>
+                <input type="text" name="author" id="author" placeholder="Author" required>
+                <input type="number" name="pages" id="pages" placeholder="Pages" min="0" required>
+                <label for="status"><p>Have you read it?</p><input type="checkbox" id="status" name="status"></label>
+
+                <button type="submit">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
